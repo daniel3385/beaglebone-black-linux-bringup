@@ -1,0 +1,5 @@
+bootargs=console=ttyO0,115200
+loadaddr=0x82000000
+fdtaddr=0x88000000
+
+uenvcmd=load mmc 0:1 ${loadaddr} zImage; load mmc 0:1 ${fdtaddr} am335x-boneblack.dtb; bootz ${loadaddr} - ${fdtaddr}
